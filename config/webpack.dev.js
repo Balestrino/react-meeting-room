@@ -17,8 +17,8 @@ module.exports = merge.smart(webpackCommon, {
     historyApiFallback: true,
     overlay: true,
     contentBase: path.join(__dirname, "docs"),
-    host: "131.114.73.88",
-    port: 80,
+    host: "0.0.0.0",
+    port: 3000,
     publicPath: "/"
   },
   devtool: "cheap-eval-source-map",
