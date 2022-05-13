@@ -1,5 +1,5 @@
 # pull official base image
-FROM node:14-alpine
+FROM node:16-alpine
 RUN apk add --no-cache --virtual .gyp python2 make g++
 
 ENV NODE_ENV=development
