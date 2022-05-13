@@ -12,10 +12,12 @@ ENV PATH /app/node_modules/.bin:$PATH
 # install app dependencies
 COPY package.json ./
 
-RUN yarn
+RUN npm install
 
 # add app
 COPY . ./
+
+EXPOSE 8016
 
 # start app
 CMD ["npm", "run", "start"]
