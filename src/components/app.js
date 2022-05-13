@@ -33,7 +33,7 @@ export default class App extends Component {
         .init({
           apiKey: GOOGLE_API_KEY
         })
-        .then(function() {
+        .then(function () {
           return gapi.client.request({
             path: `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?maxResults=11&orderBy=updated&timeMin=${moment().toISOString()}&timeMax=${moment()
               .endOf("day")
@@ -43,7 +43,7 @@ export default class App extends Component {
         .then(
           response => {
             let events = response.result.items;
-            let sortedEvents = events.sort(function(a, b) {
+            let sortedEvents = events.sort(function (a, b) {
               return (
                 moment(b.start.dateTime).format("YYYYMMDD") -
                 moment(a.start.dateTime).format("YYYYMMDD")
@@ -68,7 +68,7 @@ export default class App extends Component {
               });
             }
           },
-          function(reason) {
+          function (reason) {
             console.log(reason);
           }
         );
@@ -109,7 +109,7 @@ export default class App extends Component {
   render() {
     const { time, events } = this.state;
 
-    let eventsList = events.map(function(event) {
+    let eventsList = events.map(function (event) {
       return (
         <a
           className="list-group-item"
@@ -156,7 +156,7 @@ export default class App extends Component {
           <h1>{this.state.isBusy ? "BUSY" : "OPEN"}</h1>
         </div>
         <div className="upcoming-meetings">
-          <div className="current-time">{time}, 2018</div>
+          <div className="current-time">{time}</div>
           <h1>Upcoming Meetings</h1>
           <div className="list-group">
             {this.state.isLoading && loadingState}
@@ -165,7 +165,7 @@ export default class App extends Component {
           </div>
           <a
             className="primary-cta"
-            href="https://calendar.google.com/calendar?cid=c3FtMnVkaTFhZGY2ZHM3Z2o5aDgxdHVldDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
+            href="https://calendar.google.com/calendar/u/0?cid=bG9sNnZsYmZnZDFyaGVqcGVkbzF1aTBzYW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
             target="_blank"
           >
             +
