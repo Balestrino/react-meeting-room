@@ -45,7 +45,7 @@ services:
   app:
     image: react-meeting-room
     environment:
-      - LETSENCRYPT_HOST=meeting.centropiaggio.unipi.it
+      - LETSENCRYPT_HOST=meet.centropiaggio.unipi.it
       - LETSENCRYPT_EMAIL=salvatore.balestrino@gmail.com
       - VIRTUAL_HOST=meet.centropiaggio.unipi.it
     # volumes:
