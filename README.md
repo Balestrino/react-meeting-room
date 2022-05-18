@@ -12,9 +12,12 @@ A simple web app to book meeting room inside an office.
 4.  The app will show you meeting room availability status instantly.
 5.  You can view the list of all meetings scheduled for the day in a easily graspable view.
 
-## Live Demo
+## Docker setup
 
-[https://sivadass.github.io/react-meeting-room/](https://sivadass.github.io/react-meeting-room/)
+1. docker network create nginx-proxy
+2. docker build -t react-meeting-room .
+3. docker-compose up -d
+4. docker-compose logs -f
 
 ## Setup
 
@@ -36,7 +39,7 @@ A simple web app to book meeting room inside an office.
 
     ![Step 1](https://res.cloudinary.com/sivadass/image/upload/v1520704625/screen-shots/step-1.png)
 
-3.  Grab the **Calendar ID** (CALENDAR_ID) from _Integrate Calendar_ section.
+3.  Grab the **Calendar ID** (CALENDAR*ID) from \_Integrate Calendar* section.
 
     ![Step 2](https://res.cloudinary.com/sivadass/image/upload/v1520704853/step-2_x54i28.png)
 
