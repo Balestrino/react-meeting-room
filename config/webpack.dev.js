@@ -18,6 +18,7 @@ module.exports = merge.smart(webpackCommon, {
     overlay: true,
     contentBase: path.join(__dirname, "docs"),
     host: "0.0.0.0",
+    disableHostCheck: true,
     port: 3000,
     publicPath: "/"
   },
